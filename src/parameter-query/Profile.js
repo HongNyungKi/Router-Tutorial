@@ -1,23 +1,19 @@
 import React from 'react';
 
-const profileData = {
-    GGoalG : {
-        name: '홍녕기',
-        description: 'Coder'
+const profileData ={
+    person1:{
+        name:'홍녕기',
+        description:'Frontend Developer'
     },
-    Marine : {
-        name: '양현준',
-        description: 'Frontend Engineer'
+    person2:{
+        name:'김철환',
+        description:'Marketer'
     }
 }
 
 function Profile({ match }){
     const {username} = match.params;
     const profile = profileData[username];
-
-    if(!profile){
-        return <div>존재하지 않는 사용자입니다.</div>
-    }
 
     return (
         <div>
@@ -27,4 +23,4 @@ function Profile({ match }){
     )
 }
 
-export default Profile ;
+export default Profile;
