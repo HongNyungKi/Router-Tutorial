@@ -5,6 +5,7 @@ import About from './basic/About';
 import Profiles from './subRoute/Profiles';
 import Profile from './parameter-query/Profile';
 import History from './addition/History';
+import WidthRouterFn from './widthRouter/WidthRouterFn';
 
 function App() {
   return (
@@ -24,12 +25,14 @@ function App() {
         </li>
       </ul>
       <hr />
+      <WidthRouterFn />
       <Route path='/' component={Home} exact/>
       <Route path='/about' component={About} />
       <Route path='/profiles' component={Profiles} />
       <Route path='/profile/:username' component={Profile} /> 
       {/* 파일을 나눠나서 그런가 Profiles컴포넌트에서 Profile기능을 읽어올수없음! */}
       <Route path='/history' component={History} />
+      
     </div>
   );
 }
